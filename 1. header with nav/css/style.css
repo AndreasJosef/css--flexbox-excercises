@@ -1,0 +1,27 @@
+.main-header {
+    padding: 1rem 5rem;
+    display: flex;
+    background-color: gainsboro;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav-list {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    list-style-type: none;
+    gap: 80px;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.list-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-item a:hover {
+    color: blue;
+    border-bottom: 1px solid blue;
+}
