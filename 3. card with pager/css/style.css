@@ -1,0 +1,86 @@
+:root {
+    --card-width: 360px;
+    --card-height: clamp(320px, 50vh, 500px);
+
+    --color-bg-page: #d4d4d4;
+    --color-bg-card: #fff;
+    --color-shadow: #ccc;
+
+    --color-text-primary: #363636;
+    --color-text-secondary: #a8a8a8;
+
+    --color-pagination-dot: #999;
+    --color-pagination-dot-active: #353535;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-page);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: min(90vw, var(--card-width));
+    height: var(--card-height);
+    padding: 0 1.5rem 1.5rem;
+    background-color: var(--color-bg-card);
+    box-shadow: 6px 6px 10px var(--color-shadow);
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+.card__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.card__quote {
+    color: var(--color-text-primary);
+    font-size: 20px;
+    line-height: 1.2;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.card__author {
+    color: var(--color-text-secondary);
+}
+
+
+.card__footer{
+    margin-top: auto;
+}
+
+
+.card__pager {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-pagination-dot);
+    margin-right: .75rem;
+}
+
+.pager:last-child {
+    margin-right: 0;
+}
+
+.card__pager--active {
+    background-color: var(--color-pagination-dot-active);
+}
